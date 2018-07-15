@@ -6,6 +6,13 @@ spring:
     name: microservice-demo
 eureka:
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-     defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eurekamaster.com:8888/eureka/
+
+
+
+
+
 
