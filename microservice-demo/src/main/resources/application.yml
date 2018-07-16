@@ -1,13 +1,10 @@
-server:
-  port: 8762
-
 spring:
+  profiles:
+    active: node2
   application:
     name: service-demo
 
 eureka:
-  instance:
-    instance-id: eurekamaster.com:8762/service-demo
   client:
     serviceUrl:
       defaultZone: http://eurekamaster.com:8888/eureka/
