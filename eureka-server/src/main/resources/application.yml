@@ -1,19 +1,15 @@
 server:
   port: 8888
+
 eureka:
   instance:
     hostname: eurekamaster.com
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://eurekamaster.com:8888/eureka/
-  server:
-    enable-self-preservation: false
-
-
-
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 spring:
   application:
-    name: eureka-server
+    name: eurka-server
