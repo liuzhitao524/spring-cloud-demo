@@ -1,0 +1,23 @@
+server:
+  port: 8765
+
+
+spring:
+  application:
+    name: microservice-zuul
+eureka:
+  instance:
+    instance-id: microservice-zuul:8765
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekamaster.com:8888/eureka
+zuul:
+  routes:
+    route-demo:
+      path: /zuul-demo/**
+      serviceId: service-demo
+    route-pc:
+      path: /zuul-pc/**
+      serviceId: microservice-pc
