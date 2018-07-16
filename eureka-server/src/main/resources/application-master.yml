@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+eureka:
+  instance:
+    hostname: eurekamaster.com
+    instance-id: eurekaserver:master:8888
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekaslave.com:8889/eureka/
+# High availability need spring-application-name to be same
+spring:
+  application:
+    name: eurekaservers
