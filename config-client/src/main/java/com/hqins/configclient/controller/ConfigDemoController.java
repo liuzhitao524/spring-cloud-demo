@@ -10,6 +10,7 @@ public class ConfigDemoController {
 
     @Value("${name}")
     String name;
+
     @RequestMapping(value="/name",method=RequestMethod.GET)
     public String getName(){
         return name;
