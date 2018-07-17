@@ -3,6 +3,7 @@ server:
 eureka:
   instance:
     instance-id: microservice:pc:8764
+    hostname: eurekamaster.com
   client:
     registerWithEureka: true
     fetchRegistry: true

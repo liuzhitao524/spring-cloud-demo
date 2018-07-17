@@ -11,9 +11,9 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @RequestMapping(value="/api/pc/demo",method = RequestMethod.GET)
-    public String demo(){
-        return demoService.demo();
+    @RequestMapping(value = "/api/pc/demo", method = RequestMethod.GET)
+    public String demo() {
+        return "MicroService-PC: " + demoService.demo();
     }
 
 }
