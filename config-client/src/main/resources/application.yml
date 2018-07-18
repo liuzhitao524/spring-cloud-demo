@@ -2,12 +2,28 @@
 spring:
   application:
     name: config-client
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled:  true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 server:
   port: 8767
 eureka:
   instance:
     hostname: eurekamaster.com
     instance-id: config-clinet:8767
+
+
 
 
 
